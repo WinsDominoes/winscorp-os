@@ -8,6 +8,7 @@ set -ouex pipefail
 # RPMfusion repos are available by default in ublue main images
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
+dnf config-manager --add-repo https://repo.secureblue.dev/secureblue.repo
 
 # this installs a package from fedora repos
 dnf install -y epel-release
@@ -24,6 +25,9 @@ systemctl enable sddm.service
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
+dnf config-manager --set-disabled https://repo.secureblue.dev/secureblue.repo
+
 #### Example for enabling a System Unit File
 
-systemctl enable podman.socket
+dnf config-manager --add-repo repository
+
