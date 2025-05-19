@@ -7,11 +7,11 @@ set -ouex pipefail
 # Packages can be installed from any enabled yum repo on the image.
 # RPMfusion repos are available by default in ublue main images
 # List of rpmfusion packages can be found here:
-# https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
+
+dnf install -y 'dnf-command(config-manager)' epel-release
 dnf config-manager --add-repo https://repo.secureblue.dev/secureblue.repo
 
 # this installs a package from fedora repos
-dnf install -y epel-release
 dnf install -y trivalent @"KDE Plasma Workspaces" distrobox
 
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/secureblue.repo
