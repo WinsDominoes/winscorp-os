@@ -15,7 +15,7 @@ dnf config-manager --set-enabled crb
 # this installs a package from fedora repos
 dnf update -y
 dnf install -y trivalent distrobox
-dnf -y groupinstall "KDE Plasma Workspaces" "base-x"
+dnf -y groupinstall "KDE Plasma Workspaces"
 
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/secureblue.repo
 
