@@ -14,8 +14,8 @@ dnf config-manager --set-enabled crb
 
 # this installs a package from fedora repos
 dnf update -y
-dnf install -y trivalent distrobox
-dnf -y groupinstall "KDE Plasma Workspaces"
+dnf install -y trivalent distrobox plasma-desktop sddm dolphin
+
 
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/secureblue.repo
 
@@ -28,7 +28,6 @@ systemctl enable sddm.service
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-dnf config-manager --set-disabled https://repo.secureblue.dev/secureblue.repo
 
 #### Example for enabling a System Unit File
 
