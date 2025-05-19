@@ -16,10 +16,12 @@ dnf config-manager --add-repo https://pkgs.tailscale.com/stable/centos/10/tailsc
 
 # this installs a package from fedora repos
 dnf update -y
-dnf install -y trivalent distrobox plasma-desktop sddm dolphin flatpak ublue-os-just ublue-os-luks ublue-os-signing ublue-os-udev-rules ublue-os-update-services ublue-brew ublue-setup-services ublue-polkit-rules uupd tailscale
-dnf remove -y xwaylandvideobridge
+dnf install -y trivalent distrobox plasma-desktop sddm dolphin flatpak discover-backend-flatpak ublue-os-just ublue-os-luks ublue-os-signing ublue-os-udev-rules ublue-os-update-services ublue-brew ublue-setup-services ublue-polkit-rules uupd tailscale cockpit ptyxis
+dnf remove -y xwaylandvideobridge PackageKit
 
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/secureblue.repo
+sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/tailscale.repo
+dnf -y copr disable ublue-os/packages
 
 systemctl enable sddm.service
 systemctl enable brew-setup.service
@@ -28,6 +30,7 @@ systemctl enable fwupd.service
 systemctl enable ublue-system-setup.service
 systemctl --global enable ublue-user-setup.service
 systemctl enable uupd.timer
+systemctl enable cockpit.socket
 
 
 
