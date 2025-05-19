@@ -10,9 +10,12 @@ set -ouex pipefail
 
 dnf install -y 'dnf-command(config-manager)' epel-release
 dnf config-manager --add-repo https://repo.secureblue.dev/secureblue.repo
+dnf config-manager --set-enabled crb
 
 # this installs a package from fedora repos
-dnf install -y trivalent @"KDE Plasma Workspaces" distrobox
+dnf update -y
+dnf install -y trivalent distrobox
+dnf -y groupinstall "KDE Plasma Workspaces" "base-x"
 
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/secureblue.repo
 
