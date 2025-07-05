@@ -17,6 +17,11 @@ dnf config-manager --add-repo https://pkgs.tailscale.com/stable/centos/10/tailsc
 # this installs a package from fedora repos
 dnf update -y
 dnf install -y trivalent distrobox plasma-desktop sddm dolphin flatpak plasma-discover ublue-os-just ublue-os-luks ublue-os-signing ublue-os-udev-rules ublue-os-update-services ublue-brew ublue-setup-services ublue-polkit-rules uupd tailscale cockpit ptyxis
+
+# CrossOver Custom RPM
+dnf install -y http://crossover.codeweavers.com/redirect/crossover.rpm
+
+# Remove packages
 dnf remove -y xwaylandvideobridge PackageKit
 
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/secureblue.repo
