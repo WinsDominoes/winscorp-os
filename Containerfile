@@ -4,7 +4,7 @@ COPY build_files /
 COPY system_files /
 
 # Base Image
-FROM quay.io/almalinuxorg/almalinux-bootc:10-kitten
+FROM quay.io/almalinuxorg/almalinux-bootc:10
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
