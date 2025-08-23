@@ -16,7 +16,7 @@ dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscal
 
 # this installs a package from fedora repos
 dnf update -y
-dnf install -y trivalent distrobox plasma-desktop sddm dolphin flatpak plasma-discover ublue-os-just ublue-os-luks ublue-os-signing ublue-os-udev-rules ublue-os-update-services ublue-brew ublue-setup-services ublue-polkit-rules uupd tailscale cockpit ptyxis
+dnf install -y trivalent distrobox plasma-desktop sddm dolphin flatpak plasma-discover ublue-os-just ublue-os-luks ublue-os-signing ublue-os-udev-rules ublue-os-update-services ublue-brew ublue-setup-services ublue-polkit-rules uupd tailscale cockpit ptyxis glibc.i686 glibc-devel.i686 gcc
 
 # CrossOver Custom RPM
 dnf install -y http://crossover.codeweavers.com/redirect/crossover.rpm
@@ -36,8 +36,6 @@ systemctl enable ublue-system-setup.service
 systemctl --global enable ublue-user-setup.service
 systemctl enable uupd.timer
 systemctl enable cockpit.socket
-
-
 
 # Use a COPR Example:
 #
