@@ -19,7 +19,7 @@ dnf update -y
 dnf install -y trivalent distrobox plasma-desktop sddm dolphin flatpak plasma-discover ublue-os-just ublue-os-luks ublue-os-signing ublue-os-udev-rules ublue-os-update-services ublue-brew ublue-setup-services ublue-polkit-rules uupd tailscale cockpit ptyxis gcc
 
 # CrossOver Custom RPM
-dnf install -y http://crossover.codeweavers.com/redirect/crossover.rpm
+dnf install -y http://crossover.codeweavers.com/redirect/crossover.rpm --nobest
 
 # Remove packages
 dnf remove -y xwaylandvideobridge PackageKit
