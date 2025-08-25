@@ -18,7 +18,7 @@ dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscal
 dnf update -y
 dnf install -y trivalent distrobox plasma-desktop sddm dolphin flatpak plasma-discover ublue-os-just ublue-os-luks ublue-os-signing ublue-os-udev-rules ublue-os-update-services ublue-brew ublue-setup-services ublue-polkit-rules uupd tailscale cockpit ptyxis gcc
 
-dnf install -y https://repo.almalinux.org/almalinux/9/BaseOS/x86_64/os/Packages/glibc-2.34-168.el9_6.23.i686.rpm
+dnf install -y https://repo.almalinux.org/almalinux/9/BaseOS/x86_64/os/Packages/glibc-2.34-168.el9_6.23.i686.rpm https://repo.almalinux.org/almalinux/9/BaseOS/x86_64/os/Packages/libgcc-11.5.0-5.el9_5.alma.1.i686.rpm 
 
 # CrossOver Custom RPM
 dnf install -y http://crossover.codeweavers.com/redirect/crossover.rpm --nobest
