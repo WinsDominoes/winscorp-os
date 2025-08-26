@@ -17,11 +17,6 @@ dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscal
 # this installs a package from fedora repos
 dnf update -y
 dnf install -y trivalent distrobox plasma-desktop sddm dolphin flatpak plasma-discover ublue-os-just ublue-os-luks ublue-os-signing ublue-os-udev-rules ublue-os-update-services ublue-brew ublue-setup-services uupd tailscale cockpit ptyxis gcc sudo 
-
-# CrossOver Custom RPM
-dnf update
-dnf install -y http://crossover.codeweavers.com/redirect/crossover.rpm
-
 # Remove packages
 dnf remove -y xwaylandvideobridge PackageKit
 
