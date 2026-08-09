@@ -20,7 +20,7 @@ dnf install -y https://dl.google.com/linux/direct/google-chrome-stable_current_x
 # Remove packages
 dnf remove -y xwaylandvideobridge PackageKit
 
-sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/tailscale.repo
+sed -i 's@enabled=1@enabled=0@g' /etc/gi.repos.d/tailscale.repo
 dnf -y copr disable ublue-os/packages
 
 systemctl enable sddm.service
