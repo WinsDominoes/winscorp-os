@@ -30,7 +30,6 @@ systemctl enable sddm.service
 systemctl enable brew-setup.service
 systemctl enable tailscaled.service
 systemctl enable fwupd.service
-systemctl --global enable ublue-user-setup.service
 systemctl enable uupd.timer
 systemctl enable cockpit.socket
 systemctl enable flatpak-preinstall.service
