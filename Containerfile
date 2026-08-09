@@ -4,7 +4,7 @@ COPY build_files /
 COPY system_files /
 
 # Base Image
-FROM quay.io/almalinuxorg/almalinux-bootc:10
+FROM quay.io/almalinuxorg/almalinux-bootc:10.2
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
@@ -14,7 +14,8 @@ FROM quay.io/almalinuxorg/almalinux-bootc:10
 # Universal Blue Images: https://github.com/orgs/ublue-os/packages
 # Fedora base image: quay.io/fedora/fedora-bootc:41
 # CentOS base images: quay.io/centos-bootc/centos-bootc:stream10
-
+COPY --from=ghcr.io/ublue-os/brew:latest /system_files /
+COPY /files /
 ### MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.

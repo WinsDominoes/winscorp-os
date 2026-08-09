@@ -16,7 +16,7 @@ dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscal
 
 # this installs a package from fedora repos
 dnf update -y
-dnf install -y trivalent distrobox plasma-desktop sddm dolphin flatpak plasma-discover ublue-os-just ublue-os-luks ublue-os-signing ublue-os-udev-rules ublue-os-update-services ublue-brew ublue-setup-services uupd tailscale cockpit ptyxis gcc sudo 
+dnf install -y trivalent distrobox plasma-desktop sddm dolphin flatpak plasma-discover uupd tailscale cockpit ptyxis gcc sudo 
 # Remove packages
 dnf remove -y xwaylandvideobridge PackageKit
 
@@ -28,7 +28,6 @@ systemctl enable sddm.service
 systemctl enable brew-setup.service
 systemctl enable tailscaled.service
 systemctl enable fwupd.service
-systemctl enable ublue-system-setup.service
 systemctl --global enable ublue-user-setup.service
 systemctl enable uupd.timer
 systemctl enable cockpit.socket
