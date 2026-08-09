@@ -9,18 +9,17 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 
 dnf install -y 'dnf-command(config-manager)' epel-release
-dnf config-manager --add-repo https://repo.secureblue.dev/secureblue.repo
 dnf config-manager --set-enabled crb
 dnf -y copr enable ublue-os/packages
 dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
 
 # this installs a package from fedora repos
 dnf update -y
-dnf install -y trivalent distrobox plasma-desktop sddm dolphin flatpak plasma-discover uupd tailscale cockpit ptyxis gcc sudo 
+dnf install -y distrobox plasma-desktop sddm dolphin flatpak plasma-discover uupd tailscale cockpit ptyxis gcc sudo 
+dnf install -y https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 # Remove packages
 dnf remove -y xwaylandvideobridge PackageKit
 
-sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/secureblue.repo
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/tailscale.repo
 dnf -y copr disable ublue-os/packages
 
