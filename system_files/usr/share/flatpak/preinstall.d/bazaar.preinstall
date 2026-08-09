@@ -1,0 +1,62 @@
+# NEVER REMOVE THIS FILE
+# THIS WILL REMOVE BAZAAR FROM EVERYONES SYSTEMS IF WE REMOVE THIS
+
+[Flatpak Preinstall io.github.kolunmi.Bazaar]
+Branch=stable
+IsRuntime=false
+
+[Flatpak Preinstall org.mozilla.Thunderbird]
+Branch=stable
+IsRuntime=false
+
+[Flatpak Preinstall uno.platform.uno-calculator]
+Branch=stable
+IsRuntime=false
+
+[Flatpak Preinstall org.kde.gwenview]
+Branch=stable
+IsRuntime=false
+
+[Flatpak Preinstall org.kde.kontact]
+Branch=stable
+IsRuntime=false
+
+[Flatpak Preinstall org.kde.okular]
+Branch=stable
+IsRuntime=false
+
+[Flatpak Preinstall org.kde.kclock]
+Branch=stable
+IsRuntime=false
+
+[Flatpak Preinstall org.kde.kweather]
+Branch=stable
+IsRuntime=false
+
+[Flatpak Preinstall org.fkoehler.KTailctl]
+Branch=stable
+IsRuntime=false
+
+[Flatpak Preinstall org.videolan.VLC]
+Branch=stable
+IsRuntime=false
+
+[Flatpak Preinstall com.github.tchx84.Flatseal]
+Branch=stable
+IsRuntime=false
+
+[Flatpak Preinstall io.github.flattool.Warehouse]
+Branch=stable
+IsRuntime=false
+
+[Flatpak Preinstall io.missioncenter.MissionCenter]
+Branch=stable
+IsRuntime=false
+
+[Flatpak Preinstall org.kde.calindori]
+Branch=stable
+IsRuntime=false
+
+[Flatpak Preinstall org.gtk.Gtk3theme.Breeze]
+Branch=stable
+IsRuntime=true

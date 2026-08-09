@@ -21,6 +21,10 @@ dnf install -y https://dl.google.com/linux/direct/google-chrome-stable_current_x
 dnf remove -y xwaylandvideobridge PackageKit
 
 dnf -y copr disable ublue-os/packages
+# Add Flathub to the image for eventual application
+mkdir -p /etc/flatpak/remotes.d/
+curl --retry 3 -Lo /etc/flatpak/remotes.d/flathub.flatpakrepo https://dl.flathub.org/repo/flathub.flatpakrepo
+# Use a COPR Example:
 
 systemctl enable sddm.service
 systemctl enable brew-setup.service
@@ -29,8 +33,9 @@ systemctl enable fwupd.service
 systemctl --global enable ublue-user-setup.service
 systemctl enable uupd.timer
 systemctl enable cockpit.socket
+systemctl enable flatpak-preinstall.service
 
-# Use a COPR Example:
+
 #
 # dnf5 -y copr enable ublue-os/staging
 # dnf5 -y install package
