@@ -25,7 +25,7 @@ dnf -y copr disable ublue-os/packages
 mkdir -p /etc/flatpak/remotes.d/
 curl --retry 3 -Lo /etc/flatpak/remotes.d/flathub.flatpakrepo https://dl.flathub.org/repo/flathub.flatpakrepo
 # Use a COPR Example:
-
+ls /usr/lib/systemd/system
 systemctl enable sddm.service
 systemctl enable brew-setup.service
 systemctl enable tailscaled.service
