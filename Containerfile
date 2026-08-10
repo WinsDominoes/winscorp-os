@@ -1,11 +1,10 @@
 # Allow build scripts to be referenced without being copied into the final image
 FROM scratch AS ctx
 COPY build_files /
-COPY system_files /
 
 # Base Image
 FROM quay.io/almalinuxorg/almalinux-bootc:10.2
-
+COPY system_files /
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
 # FROM ghcr.io/ublue-os/bluefin-nvidia:stable
